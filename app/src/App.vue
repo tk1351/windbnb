@@ -1,26 +1,19 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <wind-main-view></wind-main-view>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import WindMainView from "./components/templates/WindMainView";
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
+  components: {WindMainView},
 }
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  font-size: 14px;
 }
 </style>
