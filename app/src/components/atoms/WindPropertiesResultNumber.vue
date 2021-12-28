@@ -1,3 +1,3 @@
 <template>
-  <p>10</p>
+  <p>12+ stays</p>
 </template>

@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div class="search-button-wrapper">
     <wind-location-button />
     <wind-guests-button />
     <wind-search-button />
@@ -20,7 +20,7 @@ export default {
 </script>
 
 <style scoped>
-.wrapper {
+.search-button-wrapper {
   display: flex;
   width: 300px;
   height: 50px;

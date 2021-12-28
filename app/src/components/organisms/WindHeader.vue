@@ -17,7 +17,7 @@ export default {
 <style scoped>
 .header {
   background-color: darkgray;
-  height: 100px;
+  height: calc(100vh - 90vh);
   display: flex;
   align-items: center;
   justify-content: space-between;
