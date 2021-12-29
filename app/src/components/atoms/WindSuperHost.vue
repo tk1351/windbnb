@@ -1,8 +1,19 @@
 <template>
-  <div class="super-host-wrapper">
+  <div class="super-host-wrapper" v-if="superhost">
     <span>SUPER HOST</span>
   </div>
 </template>
+
+<script>
+export default {
+  props: {
+    superhost: {
+      type: Boolean,
+      required: true
+    }
+  }
+}
+</script>
 
 <style scoped>
 .super-host-wrapper {

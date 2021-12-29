@@ -1,6 +1,17 @@
 <template>
-  <span class="property-name">Property Name</span>
+  <span class="property-name">{{ name }}</span>
 </template>
+
+<script>
+export default {
+  props: {
+    name: {
+      type: String,
+      required: true
+    }
+  }
+}
+</script>
 
 <style scoped>
 .property-name {

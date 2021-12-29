@@ -2,14 +2,14 @@
   <li class="property-card-wrapper">
     <wind-property-image />
     <div class="property-card__detail">
-      <wind-super-host />
-      <wind-property-type />
+      <wind-super-host :superhost="property.superhost" />
+      <wind-property-type :type="property.type" />
       <div class="property-card__rate">
         <wind-property-rate-icon />
-        <wind-property-rate />
+        <wind-property-rate :rate="property.rate" />
       </div>
     </div>
-    <wind-property-name />
+    <wind-property-name :name="property.name"/>
   </li>
 </template>
 
@@ -21,9 +21,20 @@ import WindPropertyRateIcon from "../atoms/WindPropertyRateIcon";
 import WindPropertyRate from "../atoms/WindPropertyRate";
 import WindPropertyName from "../atoms/WindPropertyName";
 export default {
+  props: {
+    property: {
+      type: Object,
+      required: true
+    }
+  },
   components: {
     WindPropertyName,
-    WindPropertyRate, WindPropertyRateIcon, WindPropertyType, WindSuperHost, WindPropertyImage}
+    WindPropertyRate,
+    WindPropertyRateIcon,
+    WindPropertyType,
+    WindSuperHost,
+    WindPropertyImage
+  }
 }
 </script>
 

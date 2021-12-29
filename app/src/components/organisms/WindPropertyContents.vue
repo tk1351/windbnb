@@ -2,12 +2,11 @@
   <div class="property-contents-wrapper">
     <wind-result />
     <ul class="card-list">
-      <wind-property-card />
-      <wind-property-card />
-      <wind-property-card />
-      <wind-property-card />
-      <wind-property-card />
-      <wind-property-card />
+      <wind-property-card
+          v-for="property in properties"
+          v-bind:key="property.id"
+          :property="property"
+      />
     </ul>
   </div>
 </template>
@@ -15,8 +14,18 @@
 <script>
 import WindResult from "../molecules/WindResult";
 import WindPropertyCard from "../molecules/WindPropertyCard";
+import { properties } from "../../mock/properties";
+
 export default {
-  components: {WindPropertyCard, WindResult}
+  components: {
+    WindPropertyCard,
+    WindResult
+  },
+  data () {
+    return {
+      properties
+    }
+  }
 }
 </script>
 
