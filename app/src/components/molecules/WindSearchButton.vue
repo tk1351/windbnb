@@ -10,6 +10,7 @@
 import WindLocationButton from "../atoms/WindLocationButton";
 import WindGuestsButton from "../atoms/WindGuestsButton";
 import WindSearchButton from "../atoms/WindSearchButton"
+
 export default {
   components: {
     WindGuestsButton,
@@ -26,5 +27,6 @@ export default {
   height: 50px;
   border: solid 1px;
   border-radius: 15px;
+  cursor: pointer;
 }
 </style>

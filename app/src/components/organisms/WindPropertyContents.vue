@@ -1,5 +1,5 @@
 <template>
-  <div class="property-contents-wrapper">
+  <div class="property-contents-wrapper" v-on:click="handleClick">
     <wind-result />
     <ul class="card-list">
       <wind-property-card
@@ -24,6 +24,11 @@ export default {
   data () {
     return {
       properties
+    }
+  },
+  methods: {
+    handleClick: function () {
+      this.$store.commit('close')
     }
   }
 }
