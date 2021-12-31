@@ -1,12 +1,23 @@
 <template>
-  <input type="button" value="+" class="input--add" v-on:click="handleClick" />
+  <input
+      type="button"
+      value="+"
+      class="input--add"
+      v-on:click="onAddAmountClicked"
+  />
 </template>
 
 <script>
 export default {
+  props: {
+    category: {
+      type: String,
+      required: true
+    }
+  },
   methods: {
-    handleClick() {
-      console.log('add')
+    onAddAmountClicked() {
+      this.$store.commit('increment', this.category)
     }
   }
 }

@@ -4,7 +4,23 @@ export const store = createStore({
     state () {
         return {
             open: false,
-            input: 'location'
+            input: 'location',
+            guests: {
+                adults: 0,
+                children: 0
+            }
+        }
+    },
+    getters: {
+        getAdults(state) {
+            return state.guests.adults
+        },
+        getChildren(state) {
+            return state.guests.children
+        },
+        getGuests(state) {
+            const { adults, children } = state.guests
+            return adults + children
         }
     },
     mutations: {
@@ -16,6 +32,12 @@ export const store = createStore({
         },
         changeInputTab(state, payload) {
             state.input = payload
+        },
+        increment(state, payload) {
+            payload === 'Adults' ? state.guests.adults++ : state.guests.children++
+        },
+        decrement(state, payload) {
+            payload === 'Adults' ? state.guests.adults-- : state.guests.children--
         }
     }
 })

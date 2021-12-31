@@ -3,9 +3,9 @@
     <wind-guest :category="category" />
     <wind-guest-detail :detail="detail" />
     <div class="counter">
-      <wind-remove-guest-input />
-      <wind-guests-number />
-      <wind-add-guest-input />
+      <wind-remove-guest-input :category="category" />
+      <wind-guests-number :amount="amount"/>
+      <wind-add-guest-input :category="category" />
     </div>
   </div>
 </template>
@@ -25,6 +25,10 @@ export default {
     },
     detail: {
       type: String,
+      required: true
+    },
+    amount: {
+      type: Number,
       required: true
     }
   },
